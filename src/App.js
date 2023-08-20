@@ -29,7 +29,7 @@ function App() {
     setLoginError('');
     try {
       const response = await axios.post(
-        "http://34.117.86.114/auth/login",
+        "https://34.117.86.114/auth/login",
         {
           email,
           password,
@@ -60,7 +60,7 @@ function App() {
    const handleLogout = async (e) => {
       e.preventDefault();
        try {
-          await axios.get("http://34.117.86.114/auth/logout");
+          await axios.get("https://34.117.86.114/auth/logout");
           setUser('');
           localStorage.removeItem('auth');
           setNavigate(false);       

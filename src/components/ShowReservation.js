@@ -10,7 +10,7 @@ const ShowReservation = ({ setUser, user, setNavigate, navigate }) => {
   const fetchReservation = async () => {
      try {
        const res = await axios.get(
-         "http://34.117.86.114/reservations/get-by-user",
+         "https://34.117.86.114/reservations/get-by-user",
          { withCredentials: true }
        );
 

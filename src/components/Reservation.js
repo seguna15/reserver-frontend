@@ -129,7 +129,7 @@ const Reservation = ({ setUser, user, setNavigate, navigate }) => {
         },
       };
       const response = await axios.post(
-        "http://34.117.86.114/reservations/",
+        "https://34.117.86.114/reservations/",
         dataUpload,
         { withCredentials: true }
       );
