@@ -29,13 +29,14 @@ function App() {
     setLoginError('');
     try {
       const response = await axios.post(
-        "https://34.117.86.114/auth/login",
+        "http://34.117.86.114/auth/login",
         {
           email,
           password,
         },
         { withCredentials: true }
       );
+      console.log(response);
       const userEmail = response.data.email;
       localStorage.setItem("auth", userEmail);
       
@@ -60,8 +61,9 @@ function App() {
    const handleLogout = async (e) => {
       e.preventDefault();
        try {
-          await axios.get("https://34.117.86.114/auth/logout");
+          const response = await axios.get("https://34.117.86.114/auth/logout");
           setUser('');
+          console.log(response);
           localStorage.removeItem('auth');
           setNavigate(false);       
        } catch (error) {
