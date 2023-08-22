@@ -29,7 +29,7 @@ function App() {
     setLoginError('');
     try {
       const response = await axios.post(
-        "http://34.117.86.114/auth/login",
+        "https://alhassank8s.com/auth/login",
         {
           email,
           password,
@@ -61,7 +61,9 @@ function App() {
    const handleLogout = async (e) => {
       e.preventDefault();
        try {
-          const response = await axios.get("https://34.117.86.114/auth/logout");
+          const response = await axios.get(
+            "https://alhassank8s.com/auth/logout"
+          );
           setUser('');
           console.log(response);
           localStorage.removeItem('auth');

@@ -11,7 +11,7 @@ function Register() {
         e.preventDefault();
 
         try {
-            await axios.post("http://34.117.86.114/auth/", {
+            await axios.post("https://alhassank8s.com/auth/", {
               email,
               password,
             });
