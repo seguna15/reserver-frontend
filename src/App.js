@@ -85,8 +85,6 @@ function App() {
             <Reservation
               setUser={setUser}
               user={user}
-              setNavigate={setNavigate}
-              navigate={navigate}
             />
           }
         />

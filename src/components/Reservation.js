@@ -6,7 +6,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import * as yup from 'yup';
 
 
-const Reservation = ({ setUser, user, setNavigate, navigate }) => {
+const Reservation = ({ setUser, user, setNavigate }) => {
    
     const [destination, setDestination] = useState("");
     const [number, setNumber] = useState("");
@@ -16,7 +16,8 @@ const Reservation = ({ setUser, user, setNavigate, navigate }) => {
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
     const [formError, setFormError] = useState('');
-
+    const [navigate, setNavigate] = useState(false);
+    
     const reservationSchema = yup.object().shape({
       startDate: yup.date().required(),
       endDate: yup.date().required(),
